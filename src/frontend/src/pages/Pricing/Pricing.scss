@@ -1,0 +1,109 @@
+.pricing {
+  width: 100%;
+
+  ul {
+    list-style-type: none;
+  }
+
+  .pricing-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .pricing-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+
+    .pricing-item:nth-child(1) {
+      border-top: 5px solid grey;
+      border-bottom: 5px solid grey;
+    }
+
+    .pricing-item:nth-child(2) {
+      border-top: 5px solid rgb(48, 146, 65);
+      border-bottom: 5px solid rgb(48, 146, 65);
+    }
+
+    .pricing-item:nth-child(3) {
+      border-top: 5px solid rgb(84, 60, 182);
+      border-bottom: 5px solid rgb(84, 60, 182);
+    }
+
+    .pricing-item:nth-child(4) {
+      border-top: 5px solid black;
+      border-bottom: 5px solid black;
+    }
+
+    .pricing-item {
+      width: 20%;
+      height: calc(100vdh - var(--header-height) - var(--header-height));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px grey solid;
+      border-radius: .5rem;
+      padding: .5rem;
+      text-align: center;
+
+      .item-title {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .opportunity-item {}
+    }
+  }
+
+  .pricing-support {
+    width: 85%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/pricing/banner.webp');
+    color: black;
+    padding: 3rem;
+    border-radius: 1.5rem;
+
+
+    .wrapper {
+      width: 50%;
+
+      h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        color: white;
+        background-color: rgba(82,130,255);
+        border: none;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+      }
+
+      @media (hover: hover) {
+        button:hover {
+          color: white;
+          background-color: rgb(123, 160, 255);
+          border: none;
+          border-radius: .5rem;
+          padding: .5rem 1rem;
+        }
+      }
+    }
+  }
+}

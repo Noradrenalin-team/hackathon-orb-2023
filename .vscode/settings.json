@@ -1,0 +1,57 @@
+{
+    // VSCode
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+    },
+    "git.autofetch": true,
+
+
+
+    // Python
+    "python.testing.pytestArgs": [
+        "src/URL-Shortener/tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        }
+    },
+
+    "isort.args":["--profile", "black"],
+    
+    // ФОРМАТИРОВАНИЕ
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length 85",
+        // "--skip-string-normalization",
+        "--target-version=py311",
+        "--exclude=venv,.venv,.git,.vscode,__pycache__,.pytest_cache,.mypy_cache"
+    ],
+
+    // ЛИНТЕРЫ
+    "python.linting.enabled": true,
+    
+    // Настройки pylint
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--source-roots=src/URL-Shortener",
+        "--max-line-length=90",
+        // "--allow-any-import-level",
+
+    ],
+
+    // Настройки flake8
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length 90",
+        "-max-doc-length 99",
+        "--exclude=venv,.venv,.git,.vscode,__pycache__,.pytest_cache,.mypy_cache"
+    ],
+    "cmake.configureOnOpen": true,
+
+
+}

@@ -1,0 +1,16 @@
+.login {
+  .sep {
+    margin-block: .3rem
+  }
+
+  .login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    .login-title {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .sep {
+    margin-block: .3rem
+  }
+
+  .registration-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    .registration-title {
+      margin-bottom: 1rem;
+    }
+  }
+}

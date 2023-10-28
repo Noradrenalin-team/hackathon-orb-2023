@@ -1,0 +1,10 @@
+httpx
+PyYAML
+urllib3
+anyio
+requests
+fastapi
+pydantic
+pydantic-settings
+pydantic_core
+pyjwt

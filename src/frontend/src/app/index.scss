@@ -1,0 +1,43 @@
+@import '@gravity-ui/uikit/styles/styles.css';
+@import "./styles/index.scss";
+
+@font-face {
+  font-family: 'LogoFont';
+  src:
+    url("/fonts/logo-font.woff2") format("woff2"),
+}
+
+.container {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--yc-color-text-link);
+  font-size: 1rem;
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--yc-color-text-link-hover);
+    }
+  }
+
+  &:visited {
+    color: var(--yc-color-text-link-visited);
+    @media (hover: hover) {
+      &:hover {
+        color: var(--yc-color-text-link-visited-hover);
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  min-height: calc(100vh - var(--header-height));
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

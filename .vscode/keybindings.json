@@ -1,0 +1,12 @@
+[
+    {
+      "key": "printScreen",
+      "command": "codesnap.start",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+shift+b",
+      "command": "workbench.action.tasks.runTask",
+    }
+  ]
+  

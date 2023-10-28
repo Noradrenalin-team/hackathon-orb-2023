@@ -1,0 +1,57 @@
+{
+    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:asgi_app",
+                "--reload",
+            ],
+            "jinja": true,
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/src/backend",
+        },
+        // nodejs react dev server
+        {
+            "name": "React dev server",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev",
+            ],
+            "cwd": "${workspaceFolder}/src/frontend",
+        },
+
+        // nodejs react build
+        {
+            "name": "React build",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script",
+                "build",
+            ],
+            "cwd": "${workspaceFolder}/src/frontend",
+        },
+    ],
+
+    "compounds": [
+        {
+            "name": "FastApi+React DEV",
+            "configurations": [
+                "FastAPI",
+                "React dev server"
+            ],
+        },
+    ],
+
+}
