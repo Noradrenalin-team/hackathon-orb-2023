@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.header-inline-block{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.header-block{
+    width: 200px;
+    margin: 0 50px;
+    padding: 10px;
+    color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header-block:hover{
+    background-color: darkcyan;
+    color: aquamarine;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content:baseline ;
+    min-height: 100vh;
+}
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    background-color: gray;
+}
+
+.side-bar-part{
+    text-align: center;
+    padding: 5% 5%;
+    color: white;
+    width: 100%;
+
+}
+
+.side-bar-part a{
+    color: white;
+}
+
+.body{
+    width: 100%;
+    height: auto;
+}
+
+.body-classes{
+    padding: 20px;
+}
+
+.body-classes-title{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.body-classes-title a{
+    background-color: white;
+    border: 2px solid darkcyan;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.body-classes-table table{
+    background-color: aquamarine;
+}
+
+.body-classes-table td{
+    background-color: white;
+    padding: 5px;
+}
+
+.body-classes-table .class{
+    width: 400px;
+}
+.body-classes-table .num{
+    width: 100px;
+}
+
+/* ----------class---------- */
+
+.body-class-students-table table{
+    background-color: aquamarine;
+}
+
+.body-class-students-table td{
+    background-color: white;
+    padding: 5px;
+}
+
+.body-class-students-table .name{
+    width: 500px;
+}
+
+.body-class-students-table .del{
+    width: 150px;
+}
+
+/* ----------works---------- */
+
+.body-works-content table{
+    background-color: aquamarine;
+}
+
+.body-works-content td{
+    background-color: white;
+    padding: 5px;
+}
+
+.body-works-content .name{
+    width: 400px;
+}
+
+.body-works-content .theme{
+    width: 150px;
+}
+
+.body-works-content .url{
+    width: 100px;
+    text-align: center;
+}
+
+textarea{
+    margin: 20px 10px 20px 0;
+    width: 400px;
+    height: 100px;
+    outline: none;
+	-moz-appearance: none;
+}
+
+.align-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media (max-width:1024px){
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .side-bar{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        
+    }
+
+    .side-bar-part a{
+        padding: 5px;
+        color: white;
+    }
+}
+
+@media (max-width:850px){
+
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100vh;
+    }
+
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .side-bar{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        
+    }
+
+    .side-bar-part a{
+        padding: 5px;
+        color: white;
+    }
+}
+
+@media (max-width:600px){
+    textarea{
+        width: 250px;
+        height: 100px;
+    }
+    .title-block{
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item{
+        width: 150px;
+        height: 25px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100vh;
+    }
+
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .side-bar{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        
+    }
+
+    .side-bar-part a{
+        padding: 5px;
+        color: white;
+    }
+    .body-classes-title{
+        flex-direction: column;
+        justify-content: baseline;
+    }
+}

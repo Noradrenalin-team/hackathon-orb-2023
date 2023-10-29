@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+  flex: 1 0 auto;
+}
+.body {
+  flex: 0 0 auto;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.header-inline-block{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.header-block{
+    width: 200px;
+    margin: 0 50px;
+    padding: 10px;
+    color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header-block:hover{
+    background-color: darkcyan;
+    color: aquamarine;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.body{
+    margin: 50px;
+}
+
+.body-title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.body-test{
+    width: 700px;
+    margin: 0 auto;
+}
+
+.body-test b{
+    margin-bottom: 10px;
+    font-style:italic;
+}
+
+.body-test-form-ask-text{
+    margin: 0 0 10px 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media (max-width:810px){
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100%;
+    }
+    .body{
+        margin: 10px;
+    }
+    .body-test{
+        width: 500px;
+        margin: 0 auto;
+    }
+    .body-test b{
+        font-size: 20px;
+    }
+    .p-answer{
+        font-size: large;
+    }
+}
+
+@media (max-width:520px){
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100%;
+    }
+    .body{
+        margin: 10px;
+    }
+    .body-test{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .body-test b{
+        margin-bottom: 10px;
+        font-style:italic;
+        font-size: 15px;
+    }
+    .body-title{
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .p-answer{
+        font-size: large;
+    }
+}

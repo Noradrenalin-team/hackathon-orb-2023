@@ -1,0 +1,43 @@
+{
+      "name": "Learn English grammar | School 79",
+      "short_name": "eng.sch79.ru",
+      "icons": [
+        { "src": "/static/icons/favicon.ico", "type": "image/x-icon", "sizes": "16x16 32x32" },
+        { "src": "/static/icons/icon-192.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "/static/icons/icon-512.png", "type": "image/png", "sizes": "512x512" },
+        { "src": "/static/icons/icon-192-maskable.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable" },
+        { "src": "/static/icons/icon-512-maskable.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+      ],
+      "start_url": "/",
+      "display": "standalone",
+      "display_override": "minimal-ui",
+      "background_color": "#008b8b",
+      "theme_color": "#7fffd4",
+      "description": "На этом ресурсе вы можете ознакомиться: с теоретической базой видо-временных форм глагола английского языка в активном залоге, закрепить теоретический материал в упражнениях, осуществить самоконтроль, прорешать тесты по определеннной теме",
+      "categories": ["education", "language-learning"],
+      "shortcuts" : [
+        {
+          "name": "Теория",
+          "url": "/theory",
+          "description": "Теоретический материал",
+          "icons": [
+            {"src": "/static/icons/shortcuts/theory/icon-192.png", "type": "image/png", "sizes": "192x192"},
+            {"src": "/static/icons/shortcuts/theory/icon-512.png", "type": "image/png", "sizes": "512x512"},
+            {"src": "/static/icons/shortcuts/theory/icon-192-maskable.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable"},
+            {"src": "/static/icons/shortcuts/theory/icon-512-maskable.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable"}
+          ]
+        },
+        {
+          "name": "Личный кабинет",
+          "short_name": "ЛК",
+          "url": "/lk",
+          "description": "Личный кабинет",
+          "icons": [
+            {"src": "/static/icons/shortcuts/lk/icon-192.png", "type": "image/png", "sizes": "192x192"},
+            {"src": "/static/icons/shortcuts/lk/icon-512.png", "type": "image/png", "sizes": "512x512"},
+            {"src": "/static/icons/shortcuts/lk/icon-192-maskable.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable"},
+            {"src": "/static/icons/shortcuts/lk/icon-512-maskable.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable"}
+          ]
+        }
+      ]
+}

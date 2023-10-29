@@ -21,7 +21,11 @@ export default defineConfig({
       '/api': {
         target: 'https://98grm2t1-8000.euw.devtunnels.ms',
         changeOrigin: true,
-      }
+      },
+      '/media': {
+        target: 'https://98grm2t1-8000.euw.devtunnels.ms',
+        changeOrigin: true,
+      },
     },
   },
 });

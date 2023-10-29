@@ -1,25 +1,44 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./CreateNewOrg.scss";
 import { Text, Card, TextInput, Button } from "@gravity-ui/uikit";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Context } from "app/contexts";
 
 const CreateNewOrg: React.FC = () => {
-  const [fullname, setFullname] = useState<string>("");
-  const [number, setNumber] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
   const [INN, setINN] = useState<string>("");
   const [organizationName, setOrganizationName] = useState<string>("");
   const [organizationAddress, setOrganizationAddress] = useState<string>("");
+  const [domain, setDomain] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
+  const user = useContext(Context);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user.isLogin === false) {
+      navigate("/login");
+    }
+  });
 
   function sendForm(
-    email: string,
-    fullname: string,
-    number: string,
     INN: string,
     organizationName: string,
-    organizationAddress: string
-  ) {}
+    organizationAddress: string,
+    domain: string
+  ) {
+    fetch("api/organizations/create", {
+      method: "post",
+      body: JSON.stringify({
+        name: organizationName,
+        inn: INN,
+        address: organizationAddress,
+        domain: domain,
+      }),
+    }).then((res) => {
+      navigate('/')
+    }).catch(error => {
+      console.log(error)
+    })
+  }
 
   return (
     <main className="create">
@@ -31,52 +50,25 @@ const CreateNewOrg: React.FC = () => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            const emailRegex =
-              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            const numberRegex =
-              /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
             const INNRegex = /^[\d+]{10,12}$/;
 
             if (
-              fullname.length >= 20 &&
-              emailRegex.test(email) &&
-              numberRegex.test(number) &&
               INNRegex.test(INN) &&
               organizationName.length >= 15 &&
               organizationAddress.length >= 20
             ) {
               setError(false);
-              sendForm(email, fullname, number, INN, organizationName, organizationAddress);
+              sendForm(
+                INN,
+                organizationName,
+                organizationAddress,
+                domain
+              );
             } else {
               setError(true);
             }
           }}
         >
-          <TextInput
-            size="xl"
-            type="text"
-            label="ФИО:"
-            value={fullname}
-            onChange={(e) => setEmail(e.target.value)}
-          ></TextInput>
-          <div className="sep"></div>
-          <TextInput
-            size="xl"
-            label="Номер телефона:"
-            type="text"
-            pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
-          ></TextInput>
-          <div className="sep"></div>
-          <TextInput
-            size="xl"
-            label="Почта:"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></TextInput>
-          <div className="sep"></div>
           <TextInput
             size="xl"
             label="ИНН организации:"
@@ -101,9 +93,17 @@ const CreateNewOrg: React.FC = () => {
             onChange={(e) => setOrganizationAddress(e.target.value)}
           ></TextInput>
           <div className="sep"></div>
+          <TextInput
+            size="xl"
+            label="Поддомен:"
+            type="text"
+            value={domain}
+            onChange={(e) => setDomain(e.target.value)}
+          ></TextInput>
+          <div className="sep"></div>
           {error && (
             <Text color="danger" className="error-message">
-              Неверная почта или пароль. Пожалуйста, попробуйте снова.
+              Неверно заполненна анкета. Пожалуйста, попробуйте снова.
             </Text>
           )}
           <Button view="normal" width="max" type="submit">

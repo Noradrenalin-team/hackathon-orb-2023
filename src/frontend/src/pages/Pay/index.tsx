@@ -11,7 +11,7 @@ const Pay = () => {
 
   return (
     <main>
-      Pay
+      Оплата
     </main>
   )
 }

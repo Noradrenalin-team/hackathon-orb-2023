@@ -6,8 +6,15 @@ from django.utils.translation import gettext_lazy as _
 from .models import Domain, Organization, Profile, User
 
 
+class ProfileInline(admin.TabularInline):
+    model = Profile
+    extra = 1
+
 class UserAdmin_(UserAdmin):
 
+    inlines = [
+        ProfileInline,
+    ]
 
     fieldsets = (
         (None, {"fields": ("email", "password", "avatar", "phone", "birthday")}),
@@ -47,10 +54,6 @@ class DomainInline(admin.TabularInline):
     extra = 1
 
 
-class ProfileInline(admin.TabularInline):
-    model = Profile
-    extra = 1
-
 class OrganizationAdmin(ModelAdmin):
 
     inlines = [
@@ -59,13 +62,14 @@ class OrganizationAdmin(ModelAdmin):
     ]
 
     fieldsets = (
-        (None, {"fields": ("name", "inn", "address",)}),
+        (None, {"fields": ("name", "inn", "address", "logo")}),
     )
 
-    list_display = ("name", "inn")
+    list_display = ("name", "inn", "logo")
     
 
 
+admin.site.register(User, UserAdmin_)
 admin.site.register(Organization, OrganizationAdmin)
 admin.site.register(Profile)
 admin.site.register(Domain)

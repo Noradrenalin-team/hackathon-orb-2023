@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+  flex: 1 0 auto;
+}
+.body {
+  flex: 0 0 auto;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.header-inline-block{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.header-block{
+    width: 200px;
+    margin: 0 50px;
+    padding: 10px;
+    color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header-block:hover{
+    background-color: darkcyan;
+    color: aquamarine;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.body-block-teory{
+    margin: 50px;
+}
+
+.body-block-teory-text hr{
+    margin: 20px 0;
+}
+
+.body-block-teory-table{
+    color: darkcyan;
+}
+
+.body-block-teory-table table{
+    background-color: aquamarine;
+    margin: 0 auto;
+}
+
+.body-block-teory-table td{
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    
+}
+
+.body-block-teory-table .time{
+    width: 200px;
+    margin: 10px;
+}
+
+.body-block-teory-table .rules{
+    width: 400px;
+    margin: 10px;
+}
+
+.body-block-teory-table .example{
+    width: 200px;
+    margin: 10px;
+}
+
+.time a{
+    color: darkcyan;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media (max-width:768px){
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100%;
+    }
+    .body-block-teory-table .min-none-display{
+        display: none;
+    }
+    .body-block-teory-table td{
+    }
+    .body-block-teory{
+        margin: 10px;
+    }
+    .body-block-teory-table table{
+        margin: 0;
+        width: 100%;
+    }
+    .body-block-teory-table tr{
+        display: flex;
+        flex-direction: column;
+    }
+    .body-block-teory-table .time{
+        width: 100%;
+        margin: 0 0 2px 0;
+    }
+
+    .body-block-teory-table .rules{
+        width: 100%;
+        margin: 0 0 2px 0;
+    }
+
+    .body-block-teory-table .example{
+        width: 100%;
+        margin: 0 0 5px 0;
+    }        
+}

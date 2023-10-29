@@ -1,0 +1,37 @@
+.w{
+    min-height: 100vh;
+}
+.body{
+    min-height: 100vh;
+}
+.footer {
+    color: darkcyan;
+    width: 100%;
+    background-color: aquamarine;
+    padding: 25px;
+}
+.footer-inline{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer-inline a{
+    color: darkcyan;
+}
+.footer-inline-item{
+    border-color: darkcyan;
+    margin: 5px 20px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:1000px) {
+    .footer-inline{
+        flex-direction: column-reverse;
+    }
+}

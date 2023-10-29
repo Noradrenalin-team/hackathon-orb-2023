@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+  flex: 1 0 auto;
+}
+.body {
+  flex: 0 0 auto;
+}
+
+textarea{
+    margin: 20px 10px 20px 0;
+    width: 400px;
+    height: 100px;
+    outline: none;
+ -moz-appearance: none;
+}
+
+.align-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.header-inline-block{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.header-block{
+    width: 200px;
+    margin: 0 50px;
+    padding: 10px;
+    color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header-block:hover{
+    background-color: darkcyan;
+    color: aquamarine;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.body-block-info{
+    margin: 50px;
+}
+
+.img{
+    width: 100%;
+    height: 200px;
+    background-image: url('/static/icons/background.png');
+    background-size: cover;
+    background-position-y: 45%;
+}
+
+.body-block-info-text hr{
+    margin: 20px 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+@media (max-width: 1150px) {
+    .img{
+        height: 150px;
+        background-position-y: 45%;
+    }
+}
+@media (max-width: 900px) {
+    .img{
+        height: 100px;
+        background-position-y: 45%;
+    }
+}
+@media (max-width:768px){
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100%;
+    }
+}
+@media (max-width: 520px) {
+    .img{
+        height: 50px;
+        background-position-y: 45%;
+    }
+}

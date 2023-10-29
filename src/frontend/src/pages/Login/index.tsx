@@ -14,6 +14,9 @@ const Login: React.FC = () => {
   const [error, setError] = useState<boolean>(false);
   const navigate = useNavigate();
 
+  let userParsed = localStorage.getItem('user')
+  userParsed = JSON.parse(userParsed)
+
   if(user.isLogin === 'true') {
     navigate('/')
   }
@@ -46,6 +49,7 @@ const Login: React.FC = () => {
             login: data.login,
             id: data.id,
             avatar: data.avatar,
+            role: data.role,
             isLogin: true
           });
           localStorage.setItem('user', JSON.stringify({
@@ -54,8 +58,11 @@ const Login: React.FC = () => {
             avatar: data.avatar,
             login: data.login,
             id: data.id,
+            role: data.role,
             isLogin: true
           }))
+
+          navigate("/");
         }
       })
       .catch((err) => {
@@ -101,7 +108,7 @@ const Login: React.FC = () => {
           <div className="sep"></div>
           {error && (
             <Text color="danger" className="error-message">
-              Неверная почта или пароль. Пожалуйста, попробуйте снова.
+              Неверно заполненна анкета. Пожалуйста, попробуйте снова.
             </Text>
           )}
           <Button view="normal" width="max" type="submit">

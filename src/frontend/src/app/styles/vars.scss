@@ -152,3 +152,17 @@
 
   }
 }
+
+:root {
+  .yc-modal__cell {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .yc-modal__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+}

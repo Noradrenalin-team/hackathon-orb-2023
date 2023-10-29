@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://eng.sch79.ru/</loc>
+    <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/exercises</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/tests</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/PresentSimple</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/PresentContinuous</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/PresentPerfect</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/PresentPerfectContinuous</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/PastSimple</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/PastContinuous</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/PastPerfect</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/PastPerfectContinuous</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/FutureSimple</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/FutureContinuous</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/FuturePerfect</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/theory/time/FuturePerfectContinuous</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/registration</loc>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://eng.sch79.ru/login</loc>
+  <priority>0.33</priority>
+</url>
+
+</urlset>

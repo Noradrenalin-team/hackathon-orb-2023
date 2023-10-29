@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /lk/
+Disallow: /admin/
+Sitemap: https://d5dptbimebhk40gj6f91.apigw.yandexcloud.net/sitemap.xml

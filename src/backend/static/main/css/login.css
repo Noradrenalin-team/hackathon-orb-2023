@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.header-inline-block{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.header-block{
+    width: 200px;
+    margin: 0 50px;
+    padding: 10px;
+    color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header-block:hover{
+    background-color: darkcyan;
+    color: aquamarine;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.body{
+    padding: 10px;
+}
+
+.body-title{
+    text-align: center;
+    padding: 10px;
+}
+
+.body-login-block{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.body-login-block-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-login-block-form input{
+    width: 300px;
+    height: 25px;
+    border: 2px darkgray solid;
+    padding-left: 2px;
+    margin-right: 5px;
+}
+.password-control {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: url(/static/configs/view.svg) 0 0 no-repeat;
+}
+.password-control.view {
+    background: url(/static/configs/no-view.svg) 0 0 no-repeat;
+}
+
+.wrapper{
+    /* width: 300px; */
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+
+}
+
+.body-login-block-form .button{
+    width: 300px;
+    height: 25px;
+    border: 2px darkgray solid;
+}
+
+.body-login-block-form button:hover{
+    background-color: darkgray;
+}
+
+textarea{
+    margin: 20px 10px 20px 0;
+    width: 400px;
+    height: 100px;
+    outline: none;
+ -moz-appearance: none;
+}
+
+.align-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media (max-width:768px){
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 610px){
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100%;
+    }
+
+    .body{
+        padding: 5px;
+    }
+
+    .body-login-block{
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 500px){
+    .header-inline-block{
+        flex-direction: column;
+    }
+    .header-block{
+        width: 100%;
+    }
+
+    .body{
+        padding: 5px;
+    }
+
+    .body-login-block{
+        width: 300px;
+    }
+
+}

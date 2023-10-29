@@ -233,13 +233,34 @@ def create_organization(request):
 def get_organizations(request):
     """ Получение списка компаний. """
 
-    organizations = Organization.objects.filter(profile__user=request.user)
+    profils = Profile.objects.filter(user=request.user)
 
-    return JsonResponse({'success': True, 'organizations': [{'id': org.id, 
-                                                              'name': org.name, 
-                                                              'inn': org.inn, 
-                                                              'address': org.address,
-    } for org in organizations]})
+    print(profils)
+
+
+
+    organizations = []
+
+    for profile in profils:
+        org = profile.organization
+
+        organizations.append({'id': org.id, 
+                     'name': org.name, 
+                     'inn': org.inn, 
+                     'address': org.address,
+                     'logo': org.logo.url if org.logo else '',
+                     'domain': org.domain_set.first().url if org.domain_set.first() else '',
+                     'role': profile.role if profile.role else '',
+        })
+
+
+
+    print(organizations)
+
+
+
+
+    return JsonResponse({'success': True, 'organizations': organizations})
 
 
 @login_required
@@ -252,6 +273,8 @@ def get_organization(request, organization_id):
                                                             'name': organization.name, 
                                                             'inn': organization.inn, 
                                                             'address': organization.address,
+                                                            'logo': organization.logo.url if organization.logo else '',
+                                                            'domain': organization.domain_set.first().url if organization.domain_set.first() else '',
     }})
 
 

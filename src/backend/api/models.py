@@ -140,6 +140,7 @@ class Organization(models.Model):
     name = models.CharField(_("name"), max_length=255, unique=True)
     inn = models.CharField(_("inn"), max_length=12, unique=True)
     address = models.CharField(_("address"), max_length=255, blank=True)
+    logo = models.ImageField(_("logo"), upload_to="logos/", default="logos/default.png")
 
     class Meta:
         verbose_name = _("organization")

@@ -1,6 +1,6 @@
 const Support = () => {
   return <main>
-    <p>Support</p>
+    <h1>Помощь</h1>
   </main>
 }
 
