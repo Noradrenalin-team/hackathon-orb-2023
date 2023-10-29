@@ -19,11 +19,13 @@ export default defineConfig({
     host: "0.0.0.0",
     proxy: {
       '/api': {
-        target: 'https://98grm2t1-8000.euw.devtunnels.ms',
+        // target: 'https://98grm2t1-8000.euw.devtunnels.ms',
+        target: 'http://l.профтестиум.рф:8000',
         changeOrigin: true,
       },
       '/media': {
-        target: 'https://98grm2t1-8000.euw.devtunnels.ms',
+        // target: 'https://98grm2t1-8000.euw.devtunnels.ms',
+        target: 'http://l.профтестиум.рф:8000',
         changeOrigin: true,
       },
     },

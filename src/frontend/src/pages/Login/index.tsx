@@ -39,6 +39,7 @@ const Login: React.FC = () => {
         if (res.success) {
           return res.user;
         }
+        setError(true)
       })
       .then((data) => {
         if (data) {
@@ -46,19 +47,25 @@ const Login: React.FC = () => {
           setUser({
             first_name: data.first_name,
             second_name: data.second_name,
+            last_name: data.last_name,
             login: data.login,
             id: data.id,
             avatar: data.avatar,
             role: data.role,
+            birthday: data.birthday,
+            phone: data.phone,
             isLogin: true
           });
           localStorage.setItem('user', JSON.stringify({
             first_name: data.first_name,
+            second_name: data.second_name,
             last_name: data.last_name,
             avatar: data.avatar,
             login: data.login,
             id: data.id,
+            phone: data.phone,
             role: data.role,
+            birthday: data.birthday,
             isLogin: true
           }))
 

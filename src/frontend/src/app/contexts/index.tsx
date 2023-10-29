@@ -15,10 +15,13 @@ const ContextProvider = ({ children }: { children: ReactNode }) => {
       defaultUser = {
         first_name: userParsed.first_name || null,
         last_name: userParsed.last_name || null,
+        second_name: userParsed.second_name || null,
         id: userParsed.id || null,
         login: userParsed.login || null,
         avatar: userParsed.avatar || null,
         role: userParsed.role || null,
+        birthday: userParsed.birthday || null,
+        phone: userParsed.phone || null,
         isLogin: true,
       };
     }

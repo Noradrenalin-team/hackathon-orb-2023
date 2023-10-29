@@ -42,7 +42,7 @@ const Routing = () => {
     <>
       <Header />
       <div className="wrapper">
-          {!isSecondLevelDomain(location.href) ? null : <Sidebar />}
+          {isSecondLevelDomain(location.href) ? null : <Sidebar />}
         <div className="route-wrapper">
           <Routes>
             <Route

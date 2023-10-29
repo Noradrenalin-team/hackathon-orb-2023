@@ -25,7 +25,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import redirect
 
-from .models import Organization, Profile, User
+from .models import Domain, Organization, Profile, User
 
 
 def auth_login(request):
@@ -206,6 +206,7 @@ def create_organization(request):
         name = data.get('name')
         inn = data.get('inn')
         address = data.get('address')
+        domain = data.get('domain', "".join([random.choice('abcdefghijklmnopqrstuvwxyz') for i in range(10)]))
 
         if Organization.objects.filter(inn=inn).exists():
             return JsonResponse({'success': False, 'message': 'Компания с таким ИНН уже существует'})
@@ -216,7 +217,8 @@ def create_organization(request):
         profile = Profile(user=request.user, organization=org, role='admin')
         profile.save()
 
-
+        domain = Domain(organization=org, url=domain)
+        domain.save()
 
 
 
