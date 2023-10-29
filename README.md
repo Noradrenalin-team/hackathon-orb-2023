@@ -68,4 +68,4 @@ npm run dev
 
 - Создаём админа
 ```python3 src/manage.py createsuperuser```
-- Админка доступна на странице <http://l.профтестиум.рф:8000/admin/main/contests/>
+- Админка доступна на странице <http://l.профтестиум.рф:8000/admin/>
