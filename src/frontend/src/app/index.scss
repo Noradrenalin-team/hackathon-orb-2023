@@ -1,10 +1,13 @@
-@import '@gravity-ui/uikit/styles/styles.css';
+@import "@gravity-ui/uikit/styles/styles.css";
 @import "./styles/index.scss";
 
 @font-face {
-  font-family: 'LogoFont';
-  src:
-    url("/fonts/logo-font.woff2") format("woff2"),
+  font-family: "LogoFont";
+  src: url("/fonts/logo-font.woff2") format("woff2");
+}
+@font-face {
+  font-family: "YS Text";
+  src: url("/fonts/YT.woff2") format('woff2');
 }
 
 .container {

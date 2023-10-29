@@ -10,21 +10,21 @@ const Pricing = () => {
       <div className="pricing-list">
         <div className="pricing-item">
           <div className="item-title">Бесплатный</div>
-          <div className="item-price">бесплатный</div>
-          <div className="opportunities-list">Возможность создать 1 школу</div>
+          <div className="item-price">бесплатно</div>
+          <div className="opportunities-list">Нет возможности создать школу</div>
           <Button onClick={() => {
             navigate('/pay?price=1')
-          }}>Выбрать эконом</Button>
+          }}>Выбрать Бесплатный</Button>
         </div>
         <div className="pricing-item">
           <div className="item-title">Малый бизнес</div>
           <div className="item-price">100 тыс. руб/месяц</div>
           <div className="opportunities-list">
-            <div className="opportunity-item">Возможность создать 2 школы</div>
+            <div className="opportunity-item">Возможность создать 1 школы</div>
           </div>
           <Button onClick={() => {
             navigate('/pay?price=2')
-          }}>Выбрать стандарт</Button>
+          }}>Выбрать Малый бизнес</Button>
         </div>
         <div className="pricing-item">
           <div className="item-title">Предприятие</div>
@@ -34,17 +34,17 @@ const Pricing = () => {
           </div>
           <Button onClick={() => {
             navigate('/pay?price=3')
-          }}>Выбрать профессионал</Button>
+          }}>Выбрать Предприятие</Button>
         </div>
         <div className="pricing-item">
           <div className="item-title">Корпорация</div>
           <div className="item-price">1 млн. руб/месяц</div>
           <div className="opportunities-list">
-            <div className="opportunity-item">Возможность создать 10 школ</div>
+            <div className="opportunity-item">Возможность создать 40 школ</div>
           </div>
           <Button onClick={() => {
             navigate('/pay?price=4')
-          }}>Выбрать премиум</Button>
+          }}>Выбрать Корпорация</Button>
         </div>
       </div>
       <div className="pricing-support">

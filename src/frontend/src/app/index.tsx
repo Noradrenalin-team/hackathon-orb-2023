@@ -1,19 +1,22 @@
 import "./index.scss";
 import Routing from "pages";
 import Router from "./Router/index.tsx";
-import {ThemeProvider, configure} from '@gravity-ui/uikit';
+import { ThemeProvider, configure } from "@gravity-ui/uikit";
+import ContextProvider from "app/contexts";
 
 configure({
-  lang: 'ru',
+  lang: "ru",
 });
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <Router>
-        <Routing />
-      </Router>
-    </ThemeProvider>
+    <ContextProvider>
+      <ThemeProvider theme="light">
+        <Router>
+          <Routing />
+        </Router>
+      </ThemeProvider>
+    </ContextProvider>
   );
 };
 

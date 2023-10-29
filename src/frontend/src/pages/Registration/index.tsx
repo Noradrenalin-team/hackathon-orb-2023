@@ -6,6 +6,7 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [passwordVerify, setPasswordVerify] = useState<string>("");
+  const [fullname, setFullname] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
 
   function sendForm(email: string, password: string) {
@@ -24,7 +25,7 @@ const Login: React.FC = () => {
           onSubmit={(e) => {
             e.preventDefault();
             const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (emailRegex.test(email) && password.length >= 8 && passwordVerify === password) {
+            if (emailRegex.test(email) && password.length >= 8 && passwordVerify === password && fullname.length >= 8) {
               setError(false);
               sendForm(email, password);
             } else {
@@ -38,6 +39,14 @@ const Login: React.FC = () => {
             label="Почта:"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          ></TextInput>
+          <div className="sep"></div>
+          <TextInput
+            size="xl"
+            type="text"
+            label="Полное имя:"
+            value={fullname}
+            onChange={(e) => setFullname(e.target.value)}
           ></TextInput>
           <div className="sep"></div>
           <TextInput

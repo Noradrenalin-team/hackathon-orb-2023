@@ -21,24 +21,26 @@ const Routing = () => {
   return (
     <>
       <Header />
+      <div className="wrapper">
+      
       <Routes>
         <Route
           path="/"
-          element={<Loading children={<Landing />} />}
+          element={<Loading children={<Landing />} />} // +
         />
-        <Route path="/login" element={<Loading children={<Login />} />} />
-        <Route path="/pricing" element={<Loading children={<Pricing />} />} />
-        <Route path="/reviews" element={<Loading children={<Reviews />} />} />
-        <Route path="/support" element={<Loading children={<Support />} />} />
-        <Route path="/pay" element={<Loading children={<Pay />} />} />
+        <Route path="/login" element={<Loading children={<Login />} />} /> // +
+        <Route path="/pricing" element={<Loading children={<Pricing />} />} /> // +
+        <Route path="/reviews" element={<Loading children={<Reviews />} />} /> // +
+        <Route path="/support" element={<Loading children={<Support />} />} /> // -
+        <Route path="/pay" element={<Loading children={<Pay />} />} /> // -
         <Route
           path="/registration"
-          element={<Loading children={<Registration />} />}
+          element={<Loading children={<Registration />} />} // +
         />
         <Route path="/create" element={<Loading children={<CreateNewOrg />} />} />
         <Route
           path="/integration"
-          element={<Loading children={<Integration />} />}
+          element={<Loading children={<Integration />} />} // +
         />
         <Route
           path="/company"
@@ -53,7 +55,7 @@ const Routing = () => {
           element={<Loading children={<Landing />} />}
         />
         <Route
-          path="/lk/:id/results"
+          path="/results"
           element={<Loading children={<Landing />} />}
         />
         <Route
@@ -87,6 +89,7 @@ const Routing = () => {
         <Route path="/404" element={<Loading children={<Page404 />} />} />
         <Route path="*" element={<Navigate to={"/404"} />} />
       </Routes>
+      </div>
       <Footer />
     </>
   );
